@@ -52,17 +52,19 @@ export function Experience() {
               {site.education.map((edu) => (
                 <article
                   key={`${edu.school}-${edu.degree}`}
-                  className="flex items-center gap-4 border-l-2 border-card-border pl-6"
+                  className="grid gap-4 border-l-2 border-card-border pl-6 sm:grid-cols-[10rem_1fr]"
                 >
-                  {"logo" in edu && edu.logo && (
-                    <Image
-                      src={edu.logo}
-                      alt={`${edu.school} logo`}
-                      width={48}
-                      height={48}
-                      className="h-12 w-12 shrink-0 object-contain"
-                    />
-                  )}
+                  <div>
+                    {"logo" in edu && edu.logo && (
+                      <Image
+                        src={edu.logo}
+                        alt={`${edu.school} logo`}
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 object-contain"
+                      />
+                    )}
+                  </div>
                   <div>
                     <h3 className="text-lg font-medium text-foreground">
                       {edu.degree}
