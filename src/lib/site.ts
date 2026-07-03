@@ -24,11 +24,12 @@ export const site = {
   },
   experience: [
     {
-      role: "Data & Software Engineer",
-      company: "Independent",
-      period: "Present",
+      role: "Software Engineer",
+      company: "State Street",
+      period: "July 2026 -",
       description:
         "Designing and building data pipelines, research tooling, and full-stack applications — with a focus on reproducible analysis and clean interfaces.",
+      logo: "/logos/state-street-logo.svg",
     },
   ],
   education: [
