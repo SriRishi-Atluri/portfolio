@@ -18,26 +18,26 @@ export function Experience() {
               key={`${job.company}-${job.role}`}
               className="grid gap-4 border-l-2 border-accent/40 pl-6 sm:grid-cols-[10rem_1fr]"
             >
-              <p className="text-sm font-medium text-accent">{job.period}</p>
-              <div className="flex items-start gap-4">
+              <div>
+                <p className="text-sm font-medium text-accent">{job.period}</p>
                 {"logo" in job && job.logo && (
                   <Image
                     src={job.logo}
                     alt={`${job.company} logo`}
                     width={96}
                     height={26}
-                    className="mt-1 h-6 w-auto shrink-0 object-contain"
+                    className="mt-3 h-6 w-auto object-contain"
                   />
                 )}
-                <div>
-                  <h3 className="text-lg font-medium text-foreground">
-                    {job.role}
-                    <span className="text-muted"> · {job.company}</span>
-                  </h3>
-                  <p className="mt-2 text-base leading-relaxed text-muted">
-                    {job.description}
-                  </p>
-                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground">
+                  {job.role}
+                  <span className="text-muted"> · {job.company}</span>
+                </h3>
+                <p className="mt-2 text-base leading-relaxed text-muted">
+                  {job.description}
+                </p>
               </div>
             </article>
           ))}
