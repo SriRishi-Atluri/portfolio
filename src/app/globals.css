@@ -8,6 +8,18 @@
   --card-border: #27272a;
   --accent: #d4a574;
   --accent-muted: #3d2f1f;
+  color-scheme: dark;
+}
+
+html.light {
+  --background: #faf9f7;
+  --foreground: #18181b;
+  --muted: #52525b;
+  --card: #ffffff;
+  --card-border: #e4e4e7;
+  --accent: #b4682f;
+  --accent-muted: #f3e4d0;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -30,6 +42,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-dm-sans), system-ui, sans-serif;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 ::selection {

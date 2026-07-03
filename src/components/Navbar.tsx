@@ -1,4 +1,5 @@
 import { site } from "@/lib/site";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   return (
@@ -24,12 +25,15 @@ export function Navbar() {
           ))}
         </ul>
 
-        <a
-          href={`mailto:${site.email}`}
-          className="rounded-full border border-card-border bg-card px-4 py-1.5 text-sm text-foreground transition-colors hover:border-accent/50 hover:text-accent"
-        >
-          Email
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href={`mailto:${site.email}`}
+            className="rounded-full border border-card-border bg-card px-4 py-1.5 text-sm text-foreground transition-colors hover:border-accent/50 hover:text-accent"
+          >
+            Email
+          </a>
+        </div>
       </nav>
     </header>
   );
