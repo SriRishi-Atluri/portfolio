@@ -8,7 +8,7 @@ export const site = {
   location: "College Park, MD",
   url: "https://sririshi-atluri.vercel.app",
   social: {
-    github: "https://github.com/sririshiatluri",
+    github: "https://github.com/SriRishi-Atluri",
     linkedin: "https://linkedin.com/in/sririshiatluri",
   },
   about: [
