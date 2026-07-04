@@ -65,9 +65,25 @@ export const site = {
     },
   ],
   nav: [
-    { label: "About", href: "/about" },
-    { label: "Experience", href: "/experience" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" },
+    {
+      label: "About",
+      href: "/about",
+      description: "My background, what I'm studying, and the skills I use.",
+    },
+    {
+      label: "Experience",
+      href: "/experience",
+      description: "Where I've worked and where I studied.",
+    },
+    {
+      label: "Projects",
+      href: "/projects",
+      description: "Research tools and software I've built.",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
+      description: "The best ways to reach me.",
+    },
   ],
 } as const;
