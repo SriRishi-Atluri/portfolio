@@ -1,10 +1,10 @@
 import { Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, SubstackIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-card-border px-6 py-20">
+    <section className="px-6 pt-32 pb-20">
       <div className="mx-auto max-w-5xl">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
           Contact
@@ -44,6 +44,15 @@ export function Contact() {
             >
               <LinkedinIcon className="h-4 w-4" />
               LinkedIn
+            </a>
+            <a
+              href={site.social.substack}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
+            >
+              <SubstackIcon className="h-4 w-4" />
+              Substack
             </a>
           </div>
         </div>

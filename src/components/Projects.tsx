@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export function Projects() {
   return (
-    <section id="projects" className="border-t border-card-border px-6 py-20">
+    <section className="px-6 pt-32 pb-20">
       <div className="mx-auto max-w-5xl">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
           Projects

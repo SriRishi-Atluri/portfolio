@@ -10,6 +10,7 @@ export const site = {
   social: {
     github: "https://github.com/SriRishi-Atluri",
     linkedin: "https://linkedin.com/in/sririshiatluri",
+    substack: "https://sririshiatluri.substack.com",
   },
   about: [
     "I'm a builder at the intersection of data, research, and software. I like work where analysis meets real decisions — from prediction markets to automated pipelines.",
@@ -64,9 +65,9 @@ export const site = {
     },
   ],
   nav: [
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "/about" },
+    { label: "Experience", href: "/experience" },
+    { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/contact" },
   ],
 } as const;

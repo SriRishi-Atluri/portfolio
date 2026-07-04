@@ -1,5 +1,6 @@
 import { ArrowDown, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import Link from "next/link";
+import { GithubIcon, LinkedinIcon, SubstackIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 
 function initials(name: string) {
@@ -42,12 +43,12 @@ export function Hero() {
           </p>
 
           <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="#about"
+            <Link
+              href="/about"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
             >
               About me
-            </a>
+            </Link>
             <a
               href={`mailto:${site.email}`}
               className="inline-flex items-center gap-2 rounded-full border border-card-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/50 hover:text-accent"
@@ -76,18 +77,27 @@ export function Hero() {
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
+            <a
+              href={site.social.substack}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Substack"
+              className="text-muted transition-colors hover:text-accent"
+            >
+              <SubstackIcon className="h-5 w-5" />
+            </a>
             <span className="text-sm text-muted">{site.location}</span>
           </div>
         </div>
       </div>
 
-      <a
-        href="#about"
-        aria-label="Scroll to about section"
+      <Link
+        href="/about"
+        aria-label="Go to about page"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted transition-colors hover:text-accent"
       >
         <ArrowDown className="h-5 w-5 animate-bounce" />
-      </a>
+      </Link>
     </section>
   );
 }

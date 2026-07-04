@@ -1,28 +1,40 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
+  const pathname = usePathname();
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-card-border/60 bg-background/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="font-serif text-lg tracking-tight text-foreground transition-colors hover:text-accent"
         >
           {site.shortName}
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 sm:flex">
-          {site.nav.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className="text-sm text-muted transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
+          {site.nav.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`text-sm transition-colors hover:text-foreground ${
+                    isActive ? "text-foreground" : "text-muted"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex items-center gap-3">
