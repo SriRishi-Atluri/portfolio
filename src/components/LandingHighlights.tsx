@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export function LandingHighlights() {
   return (
-    <section className="px-6 py-20">
+    <section className="border-t border-card-border px-6 py-20">
       <div className="mx-auto max-w-5xl">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
           Explore
@@ -14,11 +14,11 @@ export function LandingHighlights() {
         </h2>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {site.nav.map((item) => (
+          {site.nav.map((item, index) => (
             <Link
               key={item.href}
               href={item.href}
-              className="group rounded-2xl border border-card-border bg-card p-6 transition-colors hover:border-accent/50"
+              className={`group animate-fade-up-delay-${index + 1} rounded-2xl border border-card-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg`}
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-serif text-xl text-foreground transition-colors group-hover:text-accent">

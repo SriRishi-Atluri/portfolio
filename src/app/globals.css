@@ -78,3 +78,7 @@ body {
 .animate-fade-up-delay-3 {
   animation: fade-up 0.6s ease-out 0.24s both;
 }
+
+.animate-fade-up-delay-4 {
+  animation: fade-up 0.6s ease-out 0.32s both;
+}

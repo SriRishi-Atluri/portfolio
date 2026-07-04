@@ -1,3 +1,4 @@
+import { FeaturedProject } from "@/components/FeaturedProject";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { LandingHighlights } from "@/components/LandingHighlights";
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <FeaturedProject />
         <LandingHighlights />
       </main>
       <Footer />
